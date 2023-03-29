@@ -10,6 +10,7 @@ import UIKit
 class ViewController: UIViewController {
 
     let displayLabel = UILabel()
+    let buttonOne = CUButton(buttonText: "1", color: .blue, width: 50)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +20,7 @@ class ViewController: UIViewController {
     
     func createUI() {
         createLabel()
-        createButton(buttonText: "1")
+        createButtonOne()
     }
     
     func createLabel() {
@@ -38,24 +39,23 @@ class ViewController: UIViewController {
         ])
     }
     
-    func createButton(buttonText: String?) {
-        let button = UIButton()
-        let config = UIButton.Configuration.filled()
+    func createButtonOne() {
+        view.addSubview(buttonOne)
         
-        view.addSubview(button)
-        button.layer.cornerRadius = 16
-        button.configuration = config
-        button.setTitle(buttonText, for: .normal)
-        button.accessibilityIdentifier = "button" + (buttonText ?? "?")
-        button.translatesAutoresizingMaskIntoConstraints = false
+        buttonOne.addTarget(self, action: #selector(buttonOneTapped), for: .touchUpInside)
         
         NSLayoutConstraint.activate([
-            button.topAnchor.constraint(equalTo: displayLabel.bottomAnchor, constant: 10),
-            button.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
-            button.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
-            
-            button.heightAnchor.constraint(equalToConstant: 50)
+            buttonOne.topAnchor.constraint(equalTo: displayLabel.bottomAnchor, constant: 10),
+            buttonOne.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
+            buttonOne.widthAnchor.constraint(equalToConstant: 50),
+            buttonOne.heightAnchor.constraint(equalToConstant: 50)
         ])
     }
+    
+    @objc func buttonOneTapped() {
+        displayLabel.text = buttonOne.titleLabel?.text
+    }
+    
+    
 }
 

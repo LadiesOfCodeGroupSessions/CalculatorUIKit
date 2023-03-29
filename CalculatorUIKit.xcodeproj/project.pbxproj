@@ -17,6 +17,7 @@
 		CB963DA629CB7E40001A6F18 /* CalculatorUIKitUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB963DA529CB7E40001A6F18 /* CalculatorUIKitUITestsLaunchTests.swift */; };
 		CB963DB329CB81DC001A6F18 /* CalculatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB963DB229CB81DC001A6F18 /* CalculatorController.swift */; };
 		CB963DB429CB81DC001A6F18 /* CalculatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB963DB229CB81DC001A6F18 /* CalculatorController.swift */; };
+		CB963DD229D4B1AB001A6F18 /* CUButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB963DD129D4B1AB001A6F18 /* CUButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		CB963DA329CB7E40001A6F18 /* CalculatorUIKitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorUIKitUITests.swift; sourceTree = "<group>"; };
 		CB963DA529CB7E40001A6F18 /* CalculatorUIKitUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorUIKitUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CB963DB229CB81DC001A6F18 /* CalculatorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorController.swift; sourceTree = "<group>"; };
+		CB963DD129D4B1AB001A6F18 /* CUButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CUButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				CB963D8D29CB7E3F001A6F18 /* LaunchScreen.storyboard */,
 				CB963D9029CB7E3F001A6F18 /* Info.plist */,
 				CB963DB229CB81DC001A6F18 /* CalculatorController.swift */,
+				CB963DD129D4B1AB001A6F18 /* CUButton.swift */,
 			);
 			path = CalculatorUIKit;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB963D8729CB7E3C001A6F18 /* ViewController.swift in Sources */,
+				CB963DD229D4B1AB001A6F18 /* CUButton.swift in Sources */,
 				CB963D8329CB7E3C001A6F18 /* AppDelegate.swift in Sources */,
 				CB963D8529CB7E3C001A6F18 /* SceneDelegate.swift in Sources */,
 				CB963DB329CB81DC001A6F18 /* CalculatorController.swift in Sources */,

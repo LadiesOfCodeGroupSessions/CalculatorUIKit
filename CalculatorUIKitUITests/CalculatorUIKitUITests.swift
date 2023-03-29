@@ -32,6 +32,7 @@ final class CalculatorUIKitUITests: XCTestCase {
         let testField = app.staticTexts["displayLabel"].label
         // when the button if pushed
         XCTAssertEqual(testField, "000")
+        
         testOne.tap()
         //then display the value of the button
         XCTAssertEqual(testField, "1")
