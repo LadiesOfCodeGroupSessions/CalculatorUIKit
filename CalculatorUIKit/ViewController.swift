@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     
     func createUI() {
         createLabel()
+        createButton(buttonText: "1")
     }
     
     func createLabel() {
@@ -34,6 +35,26 @@ class ViewController: UIViewController {
             displayLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 300),
             displayLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
             displayLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
+        ])
+    }
+    
+    func createButton(buttonText: String?) {
+        let button = UIButton()
+        let config = UIButton.Configuration.filled()
+        
+        view.addSubview(button)
+        button.layer.cornerRadius = 16
+        button.configuration = config
+        button.setTitle(buttonText, for: .normal)
+        button.accessibilityIdentifier = "button" + (buttonText ?? "?")
+        button.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            button.topAnchor.constraint(equalTo: displayLabel.bottomAnchor, constant: 10),
+            button.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
+            button.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
+            
+            button.heightAnchor.constraint(equalToConstant: 50)
         ])
     }
 }

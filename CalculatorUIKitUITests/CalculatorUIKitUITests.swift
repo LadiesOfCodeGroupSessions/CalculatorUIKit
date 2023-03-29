@@ -28,7 +28,7 @@ final class CalculatorUIKitUITests: XCTestCase {
         app.launch()
         
         // given a button
-        let testOne = app.buttons["oneButton"]
+        let testOne = app.buttons["button1"]
         let testField = app.staticTexts["displayLabel"].label
         // when the button if pushed
         XCTAssertEqual(testField, "000")
